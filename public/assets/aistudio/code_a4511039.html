@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bagus Fitra Abdillah | Informatics Student &amp; Digital Creator</title>
+<!-- Google Fonts: Oswald (Monumental Display), Plus Jakarta Sans (Modern Editorial Body), Caveat (Handwritten Script) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=Oswald:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0A0A',
+            surface: '#121212',
+            elevated: '#1A1A1A',
+            crimson: {
+              DEFAULT: '#D91E2A',
+              dark: '#4A080C',
+              glow: 'rgba(217, 30, 42, 0.22)'
+            },
+            silver: '#9A9A9A',
+            muted: '#5E5E5E'
+          },
+          fontFamily: {
+            display: ['Oswald', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Component Layout Styling -->
+<style data-purpose="base-typography">
+    body {
+      background-color: #0A0A0A;
+      color: #F5F5F5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-condensed {
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+  </style>
+<style data-purpose="visual-effects">
+    /* Subtle glow for hero title */
+    .crimson-text-gradient {
+      background: linear-gradient(180deg, #D91E2A 15%, #590B10 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .crimson-glow {
+      box-shadow: 0 0 35px -8px rgba(217, 30, 42, 0.35);
+    }
+    .crimson-glow-soft {
+      box-shadow: 0 0 50px -10px rgba(217, 30, 42, 0.2);
+    }
+    /* Timeline connecting dot styles */
+    .timeline-dot {
+      box-shadow: 0 0 0 4px #121212, 0 0 0 5px rgba(217, 30, 42, 0.4);
+    }
+  </style>
+</head>
+<body class="selection:bg-crimson selection:text-white bg-obsidian text-zinc-100 antialiased min-h-screen">
+<!-- BEGIN: TopUtilityBar -->
+<header class="w-full border-b border-white/10 bg-obsidian/90 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Stacked Role Indicator -->
+<div class="flex flex-col tracking-wider">
+<span class="text-[11px] font-bold text-crimson uppercase tracking-widest leading-tight">Informatics Student</span>
+<span class="text-[12px] font-semibold text-neutral-200 tracking-wider uppercase leading-tight">Programmer &amp; Creator</span>
+</div>
+<!-- Quick Navigation & Status Badge -->
+<nav class="flex items-center gap-6 text-xs uppercase tracking-widest font-medium">
+<div class="hidden md:flex items-center gap-6 text-neutral-400">
+<a class="hover:text-white transition-colors duration-200" href="#projects">Projects</a>
+<a class="hover:text-white transition-colors duration-200" href="#skills">Skills</a>
+<a class="hover:text-white transition-colors duration-200" href="#process">Process</a>
+<a class="hover:text-white transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-crimson/40 bg-crimson/10 text-neutral-200">
+<span class="text-crimson text-xs">✦</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Open For Collaboration</span>
+</div>
+</nav>
+</div>
+</header>
+<!-- END: TopUtilityBar -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-6 pb-20 overflow-hidden border-b border-white/10" data-purpose="hero-container">
+<!-- Monumental Red "PORTFOLIO" Background Typography -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-full select-none pointer-events-none text-center z-0">
+<h1 class="font-condensed font-bold uppercase text-[20vw] sm:text-[19vw] lg:text-[18vw] leading-none tracking-tighter crimson-text-gradient opacity-90 scale-y-105">
+          PORTFOLIO
+        </h1>
+</div>
+<!-- Ambient Glow Behind Subject -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-crimson/20 blur-[130px] pointer-events-none -z-10"></div>
+<!-- Hero Main Layout Container -->
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Mobile Centered Portrait Visual (Only visible on small devices) -->
+<div class="block lg:hidden relative mx-auto w-72 h-80 mb-6">
+<img alt="Bagus Fitra Abdillah - Informatics Student &amp; Digital Creator" class="w-full h-full object-cover object-top rounded-2xl filter brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1BMkP23HyB2R8tFTWXdt0xcMu1dQsAQA9xheRCM0PNqfVf3Unmc-VJ9IzFXq8vNgDMmSMS5xMx3cCcTeq7Rge6vXr_YjJhETzTeDi6qOaGnuVEhe6C0Bv_s7qMp_BHze_hKK47pjzwKjMTAoGt0M7C2VXAoo4TlljT4xBYdzg80Q_RU0VAjbzwjHetrRQMFj35tA_CMy3lD0hHP8vTboIcvv9zAeiZlhEVWtS7q65sBqvRwMruGyI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent"></div>
+</div>
+<!-- 3-Column Editorial Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[640px]">
+<!-- Column 1: Identity & Bio (Left Overlay) -->
+<div class="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1 pt-4 lg:pt-0">
+<!-- Handwritten greeting -->
+<p class="font-script text-3xl sm:text-4xl text-neutral-200 mb-0 -rotate-2 transform">
+              Hello, I'm
+            </p>
+<!-- Massive Condensed Name -->
+<h2 class="font-condensed text-5xl sm:text-7xl font-bold uppercase tracking-tight text-white leading-[0.92] mt-1 mb-4">
+              BAGUS FITRA<br/><span class="text-white">ABDILLAH</span>
+</h2>
+<!-- Crimson Subtitle -->
+<p class="text-xs sm:text-sm font-bold tracking-widest text-crimson uppercase mb-4">
+              Informatics Engineering &amp; Digital Creator
+            </p>
+<!-- Biography text -->
+<p class="text-silver text-sm sm:text-base leading-relaxed max-w-md font-normal mb-6">
+              Informatics student at Institut Teknologi PLN and Al-Muhsin Islamic Boarding School alumnus. Passionate about building structured logic, clean programming, and impactful visual communication.
+            </p>
+<!-- Location Badge -->
+<div class="flex items-center gap-2 text-xs text-neutral-300 font-medium tracking-wide">
+<svg class="w-4 h-4 text-crimson flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10" stroke-width="1.8"></circle>
+<path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="uppercase tracking-widest text-[11px] text-neutral-300">Bandar Lampung &amp; Jakarta, Indonesia</span>
+</div>
+</div>
+<!-- Column 2: Center Subject Portrait (Desktop) -->
+<div class="hidden lg:flex lg:col-span-4 relative justify-center items-end h-[620px] order-1 lg:order-2">
+<!-- Subject Portrait -->
+<div class="relative w-full h-full max-w-[380px] flex items-end">
+<img alt="Bagus Fitra Abdillah Portrait" class="w-full h-auto max-h-[580px] object-cover object-top rounded-b-none filter brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1BMkP23HyB2R8tFTWXdt0xcMu1dQsAQA9xheRCM0PNqfVf3Unmc-VJ9IzFXq8vNgDMmSMS5xMx3cCcTeq7Rge6vXr_YjJhETzTeDi6qOaGnuVEhe6C0Bv_s7qMp_BHze_hKK47pjzwKjMTAoGt0M7C2VXAoo4TlljT4xBYdzg80Q_RU0VAjbzwjHetrRQMFj35tA_CMy3lD0hHP8vTboIcvv9zAeiZlhEVWtS7q65sBqvRwMruGyI"/>
+<!-- Floor fade gradient matching page obsidian -->
+<div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-obsidian via-obsidian/70 to-transparent"></div>
+<!-- Floating Glass Callout Badge -->
+<div class="absolute bottom-28 -right-6 bg-surface/90 backdrop-blur-md border border-white/10 p-3.5 rounded-lg max-w-[210px] shadow-2xl text-left">
+<div class="flex items-start gap-2">
+<span class="text-crimson text-sm font-bold leading-none mt-0.5">✦</span>
+<p class="text-[11px] text-neutral-200 leading-tight font-medium">
+                    Turning logic &amp; ideas into structured digital solutions.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 3: Metrics & Accomplishments (Right Side) -->
+<div class="lg:col-span-3 flex flex-col justify-center space-y-6 order-3 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8">
+<!-- Metric 01 -->
+<div class="flex items-baseline justify-between lg:justify-start lg:gap-4 border-b border-white/10 pb-4">
+<span class="font-condensed text-5xl lg:text-6xl font-bold text-crimson leading-none">2026</span>
+<div class="text-right lg:text-left">
+<span class="block text-xs font-bold uppercase tracking-wider text-white">ITPLN</span>
+<span class="block text-[11px] tracking-wider text-silver uppercase">Informatics</span>
+</div>
+</div>
+<!-- Metric 02 -->
+<div class="flex items-baseline justify-between lg:justify-start lg:gap-4 border-b border-white/10 pb-4">
+<span class="font-condensed text-5xl lg:text-6xl font-bold text-crimson leading-none">3+</span>
+<div class="text-right lg:text-left">
+<span class="block text-xs font-bold uppercase tracking-wider text-white">Leadership</span>
+<span class="block text-[11px] tracking-wider text-silver uppercase">Active Roles</span>
+</div>
+</div>
+<!-- Metric 03 -->
+<div class="flex items-baseline justify-between lg:justify-start lg:gap-4">
+<span class="font-condensed text-5xl lg:text-6xl font-bold text-crimson leading-none">7+</span>
+<div class="text-right lg:text-left">
+<span class="block text-xs font-bold uppercase tracking-wider text-white">Tech &amp; Design</span>
+<span class="block text-[11px] tracking-wider text-silver uppercase">Core Tools</span>
+</div>
+</div>
+<!-- Micro Callout for mobile -->
+<div class="lg:hidden p-3 rounded bg-surface border border-white/10 text-xs text-neutral-300">
+<span class="text-crimson font-bold">✦</span> Turning logic &amp; ideas into structured digital solutions.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: SelectedProjects -->
+<section class="py-20 border-b border-white/10 bg-obsidian" data-purpose="selected-projects" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header row -->
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 pb-4 border-b border-white/10 gap-4">
+<div>
+<h3 class="text-xs uppercase font-bold text-crimson tracking-widest mb-1">Portfolio Highlights</h3>
+<h2 class="font-condensed text-3xl sm:text-4xl font-bold uppercase text-white tracking-tight">SELECTED PROJECTS &amp; ROLES</h2>
+</div>
+<a class="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-silver hover:text-white transition-colors duration-200" href="https://github.com/AbdiL" rel="noopener noreferrer" target="_blank">
+<span>View GitHub Repositories</span>
+<span class="transform group-hover:translate-x-1 transition-transform duration-200">⟶</span>
+</a>
+</div>
+<!-- 3-Column Project Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Project 01: HIMALA CUP 2026 -->
+<article class="group bg-surface rounded-xl overflow-hidden border border-white/10 hover:border-crimson/50 transition-all duration-300 flex flex-col justify-between" data-purpose="project-card">
+<div class="p-6">
+<!-- Visual Mock Header / Preview -->
+<div class="w-full h-48 rounded-lg bg-gradient-to-br from-neutral-900 via-neutral-950 to-crimson-dark/40 border border-white/5 relative overflow-hidden flex items-center justify-center mb-6">
+<!-- Abstract Design / Event Mock graphic -->
+<div class="text-center p-4">
+<span class="text-[10px] tracking-widest text-crimson uppercase font-bold block mb-1">HIMALA ITPLN</span>
+<p class="font-condensed text-2xl uppercase font-bold tracking-tight text-white">HIMALA CUP 2026</p>
+<span class="inline-block mt-2 px-2.5 py-0.5 text-[9px] font-bold uppercase bg-white/10 text-neutral-300 rounded">Creative Direction</span>
+</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 bg-crimson/30 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Metadata -->
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-condensed text-3xl font-bold text-crimson">01</span>
+<span class="text-[10px] tracking-widest uppercase font-semibold text-neutral-400">ITPLN Lampung Student Org</span>
+</div>
+<h4 class="text-lg font-bold text-white group-hover:text-crimson transition-colors">HIMALA CUP 2026</h4>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                Appointed PDD Division Coordinator overseeing publication, branding identity, and documentation for the grand annual regional collegiate championship.
+              </p>
+</div>
+<!-- Footer Action Row -->
+<div class="px-6 py-4 bg-elevated/40 border-t border-white/5 flex items-center justify-between">
+<span class="text-[11px] font-bold tracking-wider uppercase text-neutral-400">PDD Coordinator · Visuals</span>
+<span class="text-silver group-hover:translate-x-1.5 transition-transform duration-200">⟶</span>
+</div>
+</article>
+<!-- Project 02: Python & Algorithmic Logic -->
+<article class="group bg-surface rounded-xl overflow-hidden border border-white/10 hover:border-crimson/50 transition-all duration-300 flex flex-col justify-between" data-purpose="project-card">
+<div class="p-6">
+<!-- Visual Mock Code Window -->
+<div class="w-full h-48 rounded-lg bg-[#0d1117] border border-white/10 p-3.5 relative overflow-hidden font-mono text-[11px] leading-relaxed mb-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1.5 mb-3 opacity-60">
+<span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+<span class="text-[9px] text-neutral-400 font-sans ml-2">algorithm_solver.py</span>
+</div>
+<p class="text-purple-400"><span class="text-crimson">def</span> <span class="text-blue-400">solve_logic</span>(matrix):</p>
+<p class="text-neutral-400 pl-3"># Structured optimization</p>
+<p class="text-neutral-300 pl-3">nodes = [x for x in matrix if x.valid]</p>
+<p class="text-emerald-400 pl-3"><span class="text-crimson">return</span> sorted(nodes, key=metric)</p>
+</div>
+<div class="text-[10px] text-neutral-500 text-right">UTF-8 • Python 3.12</div>
+</div>
+<!-- Metadata -->
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-condensed text-3xl font-bold text-crimson">02</span>
+<span class="text-[10px] tracking-widest uppercase font-semibold text-neutral-400">Informatics Coursework</span>
+</div>
+<h4 class="text-lg font-bold text-white group-hover:text-crimson transition-colors">Python &amp; Algorithmic Logic</h4>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                Implementation of computational logic pipelines, structured data validation, and modular algorithms mapped through comprehensive Draw.io flowcharts.
+              </p>
+</div>
+<!-- Footer Action Row -->
+<div class="px-6 py-4 bg-elevated/40 border-t border-white/5 flex items-center justify-between">
+<span class="text-[11px] font-bold tracking-wider uppercase text-neutral-400">VS Code · Python · Architecture</span>
+<span class="text-silver group-hover:translate-x-1.5 transition-transform duration-200">⟶</span>
+</div>
+</article>
+<!-- Project 03: IST & Pecinta Alam -->
+<article class="group bg-surface rounded-xl overflow-hidden border border-white/10 hover:border-crimson/50 transition-all duration-300 flex flex-col justify-between" data-purpose="project-card">
+<div class="p-6">
+<!-- Visual Mock Boarding School Leadership -->
+<div class="w-full h-48 rounded-lg bg-gradient-to-br from-neutral-900 to-black border border-white/5 relative overflow-hidden flex flex-col items-center justify-center p-4 mb-6">
+<div class="w-12 h-12 rounded-full border border-crimson/40 bg-crimson/10 flex items-center justify-center mb-3 text-crimson">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<p class="font-condensed text-xl uppercase font-bold text-white tracking-wide">ORGANIZATIONAL DISCIPLINE</p>
+<span class="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">Al-Muhsin Metro Leadership</span>
+</div>
+<!-- Metadata -->
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-condensed text-3xl font-bold text-crimson">03</span>
+<span class="text-[10px] tracking-widest uppercase font-semibold text-neutral-400">Boarding School Heritage</span>
+</div>
+<h4 class="text-lg font-bold text-white group-hover:text-crimson transition-colors">IST &amp; Pecinta Alam Leadership</h4>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                Directing division operations, environmental expeditions, and member discipline. Honed crisis response, public address, and team accountability.
+              </p>
+</div>
+<!-- Footer Action Row -->
+<div class="px-6 py-4 bg-elevated/40 border-t border-white/5 flex items-center justify-between">
+<span class="text-[11px] font-bold tracking-wider uppercase text-neutral-400">Division Head · Team Management</span>
+<span class="text-silver group-hover:translate-x-1.5 transition-transform duration-200">⟶</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: SelectedProjects -->
+<!-- BEGIN: BentoDetailsGrid -->
+<section class="py-20 border-b border-white/10 bg-obsidian" data-purpose="bento-details" id="skills">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Column 1: Education & Skills (5 Cols) -->
+<div class="lg:col-span-4 bg-surface rounded-2xl p-6 sm:p-8 border border-white/10">
+<h3 class="font-condensed text-2xl uppercase font-bold tracking-tight text-white mb-6">
+              Education &amp; Skills
+            </h3>
+<!-- Education Sub-section -->
+<div class="mb-8">
+<h4 class="text-[11px] uppercase font-bold tracking-widest text-crimson mb-4">Education</h4>
+<!-- Degree 01 -->
+<div class="border-b border-white/10 pb-4 mb-4">
+<div class="flex justify-between items-baseline">
+<h5 class="text-sm font-bold text-white">Institut Teknologi PLN</h5>
+<span class="text-[11px] font-bold text-crimson">2026 - Present</span>
+</div>
+<p class="text-xs text-silver mt-0.5">S1 Teknik Informatika (Informatics Engineering)</p>
+<p class="text-[11px] text-neutral-400 mt-1">Jakarta Barat, DKI Jakarta</p>
+</div>
+<!-- Degree 02 -->
+<div>
+<div class="flex justify-between items-baseline">
+<h5 class="text-sm font-bold text-white">Ponpes Islam Al-Muhsin Metro</h5>
+<span class="text-[11px] font-semibold text-neutral-400">Graduated</span>
+</div>
+<p class="text-xs text-silver mt-0.5">Islamic Boarding School &amp; Leadership Councils</p>
+<p class="text-[11px] text-neutral-400 mt-1">Metro, Lampung</p>
+</div>
+</div>
+<!-- Skills & Tools Tag Cloud -->
+<div>
+<h4 class="text-[11px] uppercase font-bold tracking-widest text-crimson mb-3">Core Skills &amp; Tools</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">Python</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">VS Code</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">Draw.io Flowcharts</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">Canva Design</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">MS Excel</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">MS Word</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">MS PowerPoint</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">Team Leadership</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">Event PDD</span>
+<span class="px-2.5 py-1 text-xs rounded bg-elevated border border-white/10 font-medium text-neutral-200">Problem Solving</span>
+</div>
+</div>
+</div>
+<!-- Column 2: Work Process (4 Cols) -->
+<div class="lg:col-span-4 bg-surface rounded-2xl p-6 sm:p-8 border border-white/10" id="process">
+<h3 class="font-condensed text-2xl uppercase font-bold tracking-tight text-white mb-6">
+              My Work Process
+            </h3>
+<!-- 5-Step Connected Timeline -->
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-white/10">
+<!-- Step 01 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-3.5 h-3.5 rounded-full bg-crimson timeline-dot"></div>
+<div class="flex items-baseline gap-2">
+<span class="font-condensed text-sm font-bold text-crimson">01</span>
+<h4 class="text-xs uppercase font-bold tracking-wider text-white">Analyze &amp; Structure</h4>
+</div>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                  Deconstruct project goals into clear logical components and system flowcharts.
+                </p>
+</div>
+<!-- Step 02 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-3.5 h-3.5 rounded-full bg-crimson timeline-dot"></div>
+<div class="flex items-baseline gap-2">
+<span class="font-condensed text-sm font-bold text-crimson">02</span>
+<h4 class="text-xs uppercase font-bold tracking-wider text-white">Plan &amp; Coordinate</h4>
+</div>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                  Align team members, establish deadlines, and organize division deliverables.
+                </p>
+</div>
+<!-- Step 03 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-3.5 h-3.5 rounded-full bg-crimson timeline-dot"></div>
+<div class="flex items-baseline gap-2">
+<span class="font-condensed text-sm font-bold text-crimson">03</span>
+<h4 class="text-xs uppercase font-bold tracking-wider text-white">Design &amp; Visualize</h4>
+</div>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                  Craft impactful visual identities, presentation decks, and publication assets.
+                </p>
+</div>
+<!-- Step 04 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-3.5 h-3.5 rounded-full bg-crimson timeline-dot"></div>
+<div class="flex items-baseline gap-2">
+<span class="font-condensed text-sm font-bold text-crimson">04</span>
+<h4 class="text-xs uppercase font-bold tracking-wider text-white">Develop &amp; Code</h4>
+</div>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                  Write clean Python code within VS Code following structured algorithmic rules.
+                </p>
+</div>
+<!-- Step 05 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-1 w-3.5 h-3.5 rounded-full bg-crimson timeline-dot"></div>
+<div class="flex items-baseline gap-2">
+<span class="font-condensed text-sm font-bold text-crimson">05</span>
+<h4 class="text-xs uppercase font-bold tracking-wider text-white">Review &amp; Deliver</h4>
+</div>
+<p class="text-xs text-silver mt-1 leading-relaxed">
+                  Test edge cases, prepare clear documentation, and ensure dependable execution.
+                </p>
+</div>
+</div>
+</div>
+<!-- Column 3: Crimson Testimonial Card (4 Cols) -->
+<div class="lg:col-span-4 bg-gradient-to-br from-[#5A0A10] via-crimson-dark to-[#1A0305] rounded-2xl p-6 sm:p-8 border border-crimson/40 text-white flex flex-col justify-between crimson-glow-soft min-h-[460px]">
+<div>
+<!-- Big Quotation Symbol -->
+<div class="text-6xl font-serif text-crimson leading-none select-none opacity-80">“</div>
+<blockquote class="text-base sm:text-lg font-medium leading-relaxed mt-2 text-zinc-100">
+                Collaborating with Abdillah at ITPLN always brings clarity and structure. He balances logical problem-solving with calm, dependable teamwork.
+              </blockquote>
+<!-- Handwritten Signature -->
+<div class="mt-6">
+<p class="font-script text-4xl text-white transform -rotate-3 select-none">
+                  Abdillah
+                </p>
+<div class="mt-2 text-xs font-semibold uppercase tracking-wider text-neutral-300">
+                  — Hafidz Bustomi
+                </div>
+<div class="text-[11px] text-neutral-400">
+                  Informatics Peer at ITPLN
+                </div>
+</div>
+</div>
+<!-- Card Bottom Callout -->
+<div class="pt-6 border-t border-white/20 mt-6">
+<span class="text-[11px] uppercase tracking-widest font-bold text-neutral-200 flex items-center gap-1.5">
+<span>Let's Create Something Impactful Together</span>
+<span class="text-crimson">✦</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BentoDetailsGrid -->
+<!-- BEGIN: FooterCTAAndContact -->
+<section class="py-20 bg-obsidian relative overflow-hidden" data-purpose="contact-section" id="contact">
+<!-- Ambient Glow Behind CTA -->
+<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-crimson/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Column: Big Statement & Button -->
+<div class="lg:col-span-5">
+<h2 class="font-condensed text-5xl sm:text-6xl font-bold uppercase tracking-tight text-white leading-none">
+              LET'S WORK<br/>
+<span class="text-crimson">TOGETHER</span> <span class="text-crimson">✦</span>
+</h2>
+<p class="text-silver text-sm sm:text-base leading-relaxed mt-4 mb-8 max-w-sm">
+              I'm currently open for student initiatives, tech collaborations, creative design roles, and developer partnerships. Let's create something reliable and impactful.
+            </p>
+<!-- Available Pill Button -->
+<a class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-surface border border-crimson hover:bg-crimson hover:text-white transition-all duration-300 group shadow-lg" href="mailto:bagusabdillah107@gmail.com">
+<span class="w-6 h-6 rounded-full bg-crimson group-hover:bg-white text-white group-hover:text-crimson flex items-center justify-center text-xs transition-colors">⟶</span>
+<span class="text-xs font-bold uppercase tracking-widest">Available For Collaboration</span>
+</a>
+</div>
+<!-- Middle Column: Contact Info Cards -->
+<div class="lg:col-span-4 space-y-4">
+<!-- Email Item -->
+<a class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-white/10 hover:border-crimson/60 transition-all group" href="mailto:bagusabdillah107@gmail.com">
+<div class="w-10 h-10 rounded-lg bg-elevated flex items-center justify-center text-crimson group-hover:bg-crimson group-hover:text-white transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<span class="block text-[10px] uppercase font-bold text-neutral-400 tracking-wider">Email Inquiry</span>
+<span class="text-sm font-semibold text-white">bagusabdillah107@gmail.com</span>
+</div>
+</a>
+<!-- WhatsApp Item -->
+<a class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-white/10 hover:border-crimson/60 transition-all group" href="https://wa.me/6285267761853" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-elevated flex items-center justify-center text-crimson group-hover:bg-crimson group-hover:text-white transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<span class="block text-[10px] uppercase font-bold text-neutral-400 tracking-wider">WhatsApp &amp; Phone</span>
+<span class="text-sm font-semibold text-white">+62 852-6776-1853</span>
+</div>
+</a>
+<!-- LinkedIn Item -->
+<a class="flex items-center gap-4 p-4 rounded-xl bg-surface border border-white/10 hover:border-crimson/60 transition-all group" href="https://linkedin.com/in/bagusfitraabdillah" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-elevated flex items-center justify-center text-crimson group-hover:bg-crimson group-hover:text-white transition-colors">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.738-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+</svg>
+</div>
+<div>
+<span class="block text-[10px] uppercase font-bold text-neutral-400 tracking-wider">Professional Profile</span>
+<span class="text-sm font-semibold text-white">linkedin.com/in/bagusfitraabdillah</span>
+</div>
+</a>
+<!-- Location Meta -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface/50 border border-white/5">
+<div class="w-10 h-10 rounded-lg bg-elevated flex items-center justify-center text-crimson">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<span class="block text-[10px] uppercase font-bold text-neutral-400 tracking-wider">Base Locations</span>
+<span class="text-sm font-semibold text-neutral-200">Jakarta &amp; Bandar Lampung, ID</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Laptop Workspace Mockup -->
+<div class="lg:col-span-3 flex justify-center">
+<div class="w-full max-w-[280px] bg-gradient-to-b from-[#181818] to-[#0E0E0E] p-3 rounded-2xl border border-white/10 shadow-2xl relative">
+<!-- Laptop Screen Mock -->
+<div class="w-full aspect-[4/3] bg-black rounded-lg border border-white/10 overflow-hidden relative p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between border-b border-white/10 pb-2">
+<div class="flex gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-crimson"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-600"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-600"></span>
+</div>
+<span class="text-[8px] tracking-widest text-neutral-400 font-mono">VS CODE / ITPLN</span>
+</div>
+<div class="py-2">
+<p class="text-[10px] font-condensed tracking-wider uppercase text-crimson font-bold">PORTFOLIO DEPLOYED</p>
+<p class="text-[9px] text-neutral-300 font-mono mt-1">status: 200 OK</p>
+<p class="text-[9px] text-silver font-mono">user: @AbdiL</p>
+</div>
+<div class="text-[8px] text-neutral-500 font-mono border-t border-white/5 pt-1">
+                  github.com/AbdiL
+                </div>
+</div>
+<!-- Laptop Base Plate -->
+<div class="w-full h-3 bg-neutral-800 rounded-b-lg mt-1 border-t border-white/10 flex justify-center items-center">
+<div class="w-10 h-0.5 bg-neutral-600 rounded-full"></div>
+</div>
+<!-- Subtle red keyboard glow -->
+<div class="absolute -top-4 -right-4 w-20 h-20 bg-crimson/20 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FooterCTAAndContact -->
+</main>
+<!-- BEGIN: BottomCopyrightBar -->
+<footer class="w-full py-8 border-t border-white/10 bg-obsidian text-neutral-400 text-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="uppercase tracking-wider text-[11px]">
+        © 2026 BAGUS FITRA ABDILLAH. ALL RIGHTS RESERVED.
+      </p>
+<div class="flex items-center gap-6 uppercase tracking-widest text-[11px] font-semibold">
+<a class="hover:text-crimson transition-colors" href="https://github.com/AbdiL" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="hover:text-crimson transition-colors" href="https://instagram.com/abdfitraa_" rel="noopener noreferrer" target="_blank">Instagram</a>
+<a class="hover:text-crimson transition-colors" href="https://linkedin.com/in/bagusfitraabdillah" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="text-crimson hover:underline" href="#projects">Back To Top ↑</a>
+</div>
+</div>
+</footer>
+<!-- END: BottomCopyrightBar -->
+<!-- Interactivity Script for Smooth Interactions -->
+<script data-purpose="page-interactions">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Optional subtle hover effect logic or logger
+      const interactiveCards = document.querySelectorAll('article');
+      interactiveCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.classList.add('shadow-crimson/10');
+        });
+      });
+    });
+  </script>
+</body></html>
